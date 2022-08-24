@@ -56,8 +56,7 @@ chmod +x /usr/local/bin/xray
 mkdir -p /var/log/xray/
 
 cd /root/
-source /var/lib/akbarstorevpn/ipvps.conf
-domain=$IP
+domain=$(cat /etc/xray/domain)
 wget https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
 bash acme.sh --install
 rm acme.sh
