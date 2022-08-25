@@ -42,8 +42,8 @@ latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases |
 xraycore_link="https://github.com/XTLS/Xray-core/releases/download/v$latest_version/xray-linux-64.zip"
 
 # / / Make Main Directory
-mkdir -p /usr/bin/xray
-mkdir -p /etc/xray
+#mkdir -p /usr/bin/xray
+#mkdir -p /etc/xray
 
 # / / Unzip Xray Linux 64
 cd `mktemp -d`
