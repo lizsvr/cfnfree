@@ -23,9 +23,9 @@ echo -e "${NC}${LIGHT}Please Contact Admin!!"
 echo -e "${NC}${LIGHT}Telegram : https://t.me/liz_mine"
 exit 0
 fi
-clear
 sleep 1
 clear
+cd /root/
 apt install jq curl -y
 DOMAIN=lizinstaller.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
@@ -90,5 +90,4 @@ echo "Host : $SUB_DOMAIN"
 echo $SUB_DOMAIN > /etc/xray/domain
 echo $SUB_DOMAIN > /root/domain
 echo "IP=$SUB_DOMAIN" >>/var/lib/akbarstorevpn/ipvps.conf
-rm -f /root/cf.sh
 sleep 3

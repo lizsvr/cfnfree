@@ -82,11 +82,12 @@ wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 wget https://${akbarvpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 
 
+rm -f /root/cf.sh
 rm -f /root/ssh-vpn.sh
-rm -f /root/sstp.sh
-rm -f /root/wg.sh
-rm -f /root/ss.sh
-rm -f /root/ssr.sh
+#rm -f /root/sstp.sh
+#rm -f /root/wg.sh
+#rm -f /root/ss.sh
+#rm -f /root/ssr.sh
 rm -f /root/ins-xray.sh
 rm -f /root/ipsec.sh
 rm -f /root/set-br.sh
