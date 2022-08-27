@@ -449,7 +449,7 @@ wget -O deltrgo "https://${akbarvpnnn}/deltrgo.sh"
 wget -O renewtrgo "https://${akbarvpnnn}/renewtrgo.sh"
 wget -O cektrgo "https://${akbarvpnnn}/cektrgo.sh"
 wget -O portsshws "https://${akbarvpnnnnn}/portsshws.sh"
-wget -O portsshwsnontls "https://${akbarvpnnnnn}/portsshwsnontls.sh"
+wget -O portsshnontls "https://${akbarvpnnnnn}/portsshnontls.sh"
 
 chmod +x addhost
 chmod +x menu
