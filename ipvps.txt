@@ -2,5 +2,4 @@
 ### udin 139.144.123.22 d8u8vod6cos8u.cloudfront.net 2022-09-22
 ### aldi 188.166.220.160 d8u8vod6cos8u.cloudfront.net 2022-10-12
 ### lizadm 18.141.196.84 d8u8vod6cos8u.cloudfront.net 2022-10-09
-### lizadm 175.41.156.10
-### lizadm 18.141.24.43
+### lizadm 18.142.255.154
