@@ -47,18 +47,28 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user akbarssh21@gmail.com
-from akbarssh21@gmail.com
-password qngaxejnuuworequ 
+user ahmaddani231187@gmail.com
+from ahmaddani231187@gmail.com
+password vjbikwuumofcdexc 
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://${akbarvpn}/autobackup.sh"
+#wget -O autobackup "https://${akbarvpn}/autobackup.sh"
+wget -O addemail "https://${akbarvpn}/addemail.sh"
+wget -O changesend "https://${akbarvpn}/changesend.sh"
+wget -O startbackup "https://${akbarvpn}/startbackup.sh"
+wget -O stopbackup "https://${akbarvpn}/stopbackup.sh"
+wget -O testsend "https://${akbarvpn}/testsend.sh"
 wget -O backup "https://${akbarvpn}/backup.sh"
 wget -O restore "https://${akbarvpn}/restore.sh"
 wget -O strt "https://${akbarvpn}/strt.sh"
 wget -O limitspeed "https://${akbarvpn}/limitspeed.sh"
+chmod +x addemail
+chmod +x changesend
+chmod +x startbackup
+chmod +x stopbackup
+chmod +x testsend
 chmod +x autobackup
 chmod +x backup
 chmod +x restore
