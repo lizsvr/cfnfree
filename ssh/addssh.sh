@@ -14,7 +14,6 @@ LIGHT='\033[0;37m'
 # Getting
 
 domain=$(cat /root/domain)
-#cfdomain=$(cat /root/cfdomain)
 clear
 read -p "Username : " Login
 read -p "Password : " pass
@@ -45,7 +44,6 @@ echo -e "Thank You For Using Our Services"
 echo -e "====== SSH & OVPN Account ======"
 echo -e "IP/Host       : $IP"
 echo -e "domain       : ${domain}"
-#echo -e "CloudFront    : ${cfdomain}"
 echo -e "Username      : $Login"
 echo -e "Password      : $pass"
 echo -e ""
