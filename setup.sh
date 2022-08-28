@@ -39,6 +39,8 @@ akbarvpnnnnnnnn="raw.githubusercontent.com/lizsvr/project/main/backup"
 akbarvpnnnnnnnnn="raw.githubusercontent.com/lizsvr/project/main/websocket"
 # Link Hosting Kalian Untuk Ohp
 akbarvpnnnnnnnnnn="raw.githubusercontent.com/lizsvr/project/main/ohp"
+# link Hosting update
+akbarvpnnnnnnnnnnn="raw.githubusercontent.com/lizsvr/project/main/update"
 
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
@@ -81,6 +83,8 @@ wget https://${akbarvpnnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
 wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 #Setting Backup
 wget https://${akbarvpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+# Update Menu
+wget https://${akbarvpnnnnnnnnnnn}/getupdate.sh && chmod +x getupdate.sh && ./getupdate.sh
 
 restart
 
