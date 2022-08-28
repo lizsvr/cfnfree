@@ -38,6 +38,7 @@ EOF
 fi
 clear
 echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
+cd /root
 rm -rf /root/backup
 mkdir /root/backup
 cp /etc/passwd backup/
@@ -76,6 +77,7 @@ echo -e "
 Detail Backup 
 ==================================
 IP VPS        : $IP
+Domain        : $domain
 Link Backup   : $link
 Tanggal       : $date
 ==================================

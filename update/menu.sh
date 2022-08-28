@@ -49,7 +49,7 @@ maddxray
 restart
 ;;
 4)
-backupp
+mbackup
 ;;
 5)
 msetting
