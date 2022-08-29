@@ -38,9 +38,9 @@ echo -e ""
 echo -e "=================================="
 echo -e "       Status Autokill $sts       "
 echo -e "=================================="
-echo -e "1. AutoKill After 5 Minutes"
-echo -e "2. AutoKill After 10 Minutes"
-echo -e "3. AutoKill After 15 Minutes"
+echo -e "1. AutoKill After 1 Minutes"
+echo -e "2. AutoKill After 5 Minutes"
+echo -e "3. AutoKill After 10 Minutes"
 echo -e "4. Turn Off AutoKill/MultiLogin"
 echo -e "5. Exit"
 echo -e "=================================="                                                                                                          
@@ -55,17 +55,33 @@ case $AutoKill in
                 clear
                 echo > /etc/cron.d/tendang
                 echo "# Autokill" >>/etc/cron.d/tendang
-                echo "*/5 * * * *  root /usr/bin/tendang $max" >>/etc/cron.d/tendang
+                echo "*/1 * * * *  root /usr/bin/tendang $max" >>/etc/cron.d/tendang
                 echo -e ""
                 echo -e "======================================"
                 echo -e ""
                 echo -e "      Allowed MultiLogin : $max"
-                echo -e "      AutoKill Every     : 5 Minutes"      
+                echo -e "      AutoKill Every     : 1 Minutes"      
                 echo -e ""
                 echo -e "======================================"                                                                                                                                 
                 exit                                                                  
                 ;;
                 2)
+                echo -e ""
+                sleep 1
+                clear
+                echo > /etc/cron.d/tendang
+                echo "# Autokill" >>/etc/cron.d/tendang
+                echo "*/5 * * * *  root /usr/bin/tendang $max" >>/etc/cron.d/tendang
+                echo -e ""
+                echo -e "======================================"
+                echo -e ""
+                echo -e "      Allowed MultiLogin : $max"
+                echo -e "      AutoKill Every     : 5 Minutes"
+                echo -e ""
+                echo -e "======================================"
+                exit
+                ;;
+                3)
                 echo -e ""
                 sleep 1
                 clear
@@ -77,22 +93,6 @@ case $AutoKill in
                 echo -e ""
                 echo -e "      Allowed MultiLogin : $max"
                 echo -e "      AutoKill Every     : 10 Minutes"
-                echo -e ""
-                echo -e "======================================"
-                exit
-                ;;
-                3)
-                echo -e ""
-                sleep 1
-                clear
-                echo > /etc/cron.d/tendang
-                echo "# Autokill" >>/etc/cron.d/tendang
-                echo "*/15 * * * *  root /usr/bin/tendang $max" >>/etc/cron.d/tendang
-                echo -e ""
-                echo -e "======================================"
-                echo -e ""
-                echo -e "      Allowed MultiLogin : $max"
-                echo -e "      AutoKill Every     : 15 Minutes"
                 echo -e ""
                 echo -e "======================================"
                 exit
