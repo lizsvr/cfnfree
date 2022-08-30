@@ -43,7 +43,7 @@ clear
 echo -e "Thank You For Using Our Services"
 echo -e "====== SSH & OVPN Account ======"
 echo -e "IP/Host       : $IP"
-echo -e "domain       : ${domain}"
+echo -e "Domain       : ${domain}"
 echo -e "Username      : $Login"
 echo -e "Password      : $pass"
 echo -e ""

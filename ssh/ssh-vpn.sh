@@ -500,6 +500,7 @@ chmod +x portsshws
 chmod +x portsshnontls
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
+echo "5 0 * * * root delexp && restart " >> /etc/crontab
 # remove unnecessary files
 cd
 apt autoclean -y
