@@ -92,6 +92,8 @@ restart
 
 rm -f /root/cf.sh
 rm -f /root/ssh-vpn.sh
+rm -f /root/sslh-fix.sh
+rm -f /root/getupdate.sh
 #rm -f /root/sstp.sh
 #rm -f /root/wg.sh
 #rm -f /root/ss.sh
