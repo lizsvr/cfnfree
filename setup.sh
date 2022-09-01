@@ -61,7 +61,7 @@ echo "Script Already Installed"
 exit 0
 fi
 mkdir /var/lib/akbarstorevpn;
-echo "IP=" >> /var/lib/akbarstorevpn/ipvps.conf
+#echo "IP=" >> /var/lib/akbarstorevpn/ipvps.conf
 wget https://${akbarvpn}/cf.sh && chmod +x cf.sh && ./cf.sh
 sleep 1
 #install v2ray

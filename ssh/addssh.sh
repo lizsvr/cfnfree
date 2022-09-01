@@ -12,8 +12,13 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-
-domain=$(cat /root/domain)
+source /var/lib/akbarstorevpn/ipvps.conf
+if [[ "$IP" = "" ]]; then
+domain=$(cat /etc/xray/domain)
+else
+domain=$IP
+fi
+clear
 clear
 read -p "Username : " Login
 read -p "Password : " pass

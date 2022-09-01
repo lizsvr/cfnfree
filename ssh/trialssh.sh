@@ -26,10 +26,10 @@ echo -e "${NC}${LIGHT}Telegram : https://t.me/Akbar218"
 exit 0
 fi
 source /var/lib/akbarstorevpn/ipvps.conf
-if [[ "$IP2" = "" ]]; then
+if [[ "$IP" = "" ]]; then
 domain=$(cat /root/domain)
 else
-domain=$IP2
+domain=$IP
 fi
 clear
 IP=$(wget -qO- ipinfo.io/ip);
