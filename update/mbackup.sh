@@ -10,6 +10,28 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
+# Getting
+MYIP=$(wget -qO- ipinfo.io/ip);
+echo "Checking VPS"
+IZIN=$(curl https://raw.githubusercontent.com/lizsvr/project/main/ipvps.txt | grep $MYIP | awk '{print $3}')
+if [ $MYIP = $IZIN ]; then
+echo -e "${NC}${GREEN}Permission Accepted...${NC}"
+else
+echo -e "${NC}${RED}Permission Denied!${NC}";
+echo -e "${NC}${LIGHT}Please Contact Admin!!"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/liz_mine"
+exit 0
+fi
+clear
+Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
+Info="${Green_font_prefix}[ON] ${Font_color_suffix}"
+Error="${Red_font_prefix}[OFF]${Font_color_suffix}"
+cek=$(grep -c -E "^# BEGIN_Backup" /etc/crontab)
+if [[ "$cek" = "1" ]]; then
+sts="${Info}"
+else
+sts="${Error}"
+fi
 #information
 OK = "$ {
   Green
@@ -35,6 +57,7 @@ echo -e "$BLUE╠➣$NC 6$NC. Test Send Mail           $BLUE         ║ "
 echo -e "$BLUE╠➣$NC 7$NC. Restore                     $BLUE      ║ " 
 echo -e "$BLUE╠➣$NC 8$NC. Exit                        $BLUE      ║ " 
 echo -e "$BLUE║---------------------------------------║"
+echo -e "$BLUE╠➣ $NC Auto Backup Status $sts    $BLUE        ║"
 echo -e "$BLUE╚═══════════════════════════════════════╝$NC"  
 read -p "Select From Options [ 1 - 8 ] : " menu
 echo -e ""

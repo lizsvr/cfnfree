@@ -25,7 +25,7 @@ exit 0
 fi
 clear
 read -rp "Domain/Host : " -e domain
-echo "IP=$domain" >>/var/lib/akbarstorevpn/ipvps.conf
+echo "IP=$domain" >> /var/lib/akbarstorevpn/ipvps.conf
 echo $domain > /etc/xray/domain
 echo $domain > /root/domain
 clear
