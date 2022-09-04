@@ -6,3 +6,4 @@
 ### lizadm 103.187.106.18 VIP-ID
 ### lizadm 146.190.18.169 VIP-AMSTERDAM
 ### lizadm 164.92.166.180 VIP-FRANKFURT
+### lizadm 167.99.75.240 SGDO02
