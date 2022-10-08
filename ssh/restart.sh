@@ -14,7 +14,7 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 IZIN=$(curl https://raw.githubusercontent.com/lizsvr/project/main/ipvps.txt | grep $MYIP | awk '{print $3}')
-if [ $MYIP = $IZIN ]; then
+if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
@@ -29,7 +29,7 @@ sleep 2
 #systemctl restart ssrmu
 systemctl restart ws-tls
 systemctl restart ws-nontls
-systemctl restart xray.service
+#systemctl restart xray.service
 #systemctl restart shadowsocks-libev
 #systemctl restart xl2tpd
 #systemctl restart pptpd
@@ -40,7 +40,7 @@ systemctl restart ws-ovpn
 systemctl restart ssh-ohp
 systemctl restart dropbear-ohp
 systemctl restart openvpn-ohp
-systemctl restart trojan-go
+#systemctl restart trojan-go
 #/etc/init.d/ssrmu restart
 /etc/init.d/ssh restart
 /etc/init.d/dropbear restart
