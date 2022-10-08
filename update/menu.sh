@@ -31,12 +31,13 @@ echo -e "$BLUE╠➣$NC 1$NC. SSH & OpenVPN Account             $BLUE║ "
 echo -e "$BLUE╠➣$NC 2$NC. Restart All Service         $BLUE      ║ " 
 echo -e "$BLUE╠➣$NC 3$NC. Backup & Restore            $BLUE      ║ " 
 echo -e "$BLUE╠➣$NC 4$NC. Settings                    $BLUE      ║ " 
-echo -e "$BLUE╠➣$NC 5$NC. Exit                        $BLUE      ║ " 
+echo -e "$BLUE╠➣$NC 5$NC. About                        $BLUE      ║ " 
+echo -e "$BLUE╠➣$NC 6$NC. Exit                        $BLUE      ║ " 
 echo -e "$BLUE║---------------------------------------║"
 echo -e "$BLUE╠➣$NC User: Admin                          $BLUE║"
 echo -e "$BLUE╠➣$NC Expired: Never                       $BLUE║"
 echo -e "$BLUE╚═══════════════════════════════════════╝$NC"  
-read -p "Select From Options [ 1 - 5 ] : " menu
+read -p "Select From Options [ 1 - 6 ] : " menu
 echo -e ""
 case $menu in
 1)
@@ -50,6 +51,9 @@ mbackup
 ;;
 4)
 msetting
+;;
+5)
+about
 ;;
 5)
 clear
