@@ -1,5 +1,4 @@
 ### lizsvr
-### lizadm 18.142.255.154 GBWA
 ### lizadm 159.223.84.177 Trial
 ### lizadm 206.189.84.236 VIP-SG
 ### lizadm 64.227.10.222 VIP-NY
