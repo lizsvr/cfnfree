@@ -62,7 +62,7 @@ exit 0
 fi
 mkdir /var/lib/akbarstorevpn;
 #echo "IP=" >> /var/lib/akbarstorevpn/ipvps.conf
-wget https://${akbarvpn}/addhost.sh && chmod +x addhost.sh && ./addhost.sh
+wget https://${akbarvpn}/newhost.sh && chmod +x newhost.sh && ./newhost.sh
 sleep 1
 #install v2ray
 wget https://${akbarvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
@@ -90,6 +90,7 @@ rm -f /root/ipsec.sh
 rm -f /root/set-br.sh
 rm -f /root/edu.sh
 rm -f /root/ohp.sh
+rm -f /root/addhost.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
