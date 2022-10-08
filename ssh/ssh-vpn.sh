@@ -15,7 +15,7 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 IZIN=$(curl https://raw.githubusercontent.com/lizsvr/project/main/ipvps.txt | grep $MYIP | awk '{print $3}')
-if [ $MYIP = $IZIN ]; then
+if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
@@ -26,19 +26,19 @@ fi
 clear
 # ==================================================
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/lizsvr/project/main/ssh"
+akbarvpn="raw.githubusercontent.com/lizsvr/cfnfree/main/ssh"
 
 # Link Hosting Kalian Untuk Xray
-akbarvpnn="raw.githubusercontent.com/lizsvr/project/main/xray"
+akbarvpnn="raw.githubusercontent.com/lizsvr/cfnfree/main/xray"
 
 # Link Hosting Kalian Untuk Trojan Go
-akbarvpnnn="raw.githubusercontent.com/lizsvr/project/main/trojango"
+akbarvpnnn="raw.githubusercontent.com/lizsvr/cfnfree/main/trojango"
 
 # Link Hosting Kalian Untuk Stunnel5
-akbarvpnnnn="raw.githubusercontent.com/lizsvr/project/main/stunnel5"
+akbarvpnnnn="raw.githubusercontent.com/lizsvr/cfnfree/main/stunnel5"
 
 #Link Hosting Kalian Untuk Websocket
-akbarvpnnnnn="raw.githubusercontent.com/lizsvr/project/main/websocket"
+akbarvpnnnnn="raw.githubusercontent.com/lizsvr/cfnfree/main/websocket"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive

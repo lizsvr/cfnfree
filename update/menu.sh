@@ -27,34 +27,31 @@ echo -e "$BLUE║           $ORANGE  [ Main Menu ]          $BLUE   ║"
 echo -e "$BLUE╠═══════════════════════════════════════$BLUE╣"
 echo -e "$BLUE║---------------------------------------║"
 echo -e "$BLUE╠➣$NC 1$NC. SSH & OpenVPN Account             $BLUE║ "
-echo -e "$BLUE╠➣$NC 2$NC. Xray/V2Ray & Trojan Account  $BLUE     ║ " 
-echo -e "$BLUE╠➣$NC 3$NC. Restart All Service         $BLUE      ║ " 
-echo -e "$BLUE╠➣$NC 4$NC. Backup & Restore            $BLUE      ║ " 
-echo -e "$BLUE╠➣$NC 5$NC. Settings                    $BLUE      ║ " 
-echo -e "$BLUE╠➣$NC 6$NC. Exit                        $BLUE      ║ " 
+# echo -e "$BLUE╠➣$NC 2$NC. Xray/V2Ray & Trojan Account  $BLUE     ║ " 
+echo -e "$BLUE╠➣$NC 2$NC. Restart All Service         $BLUE      ║ " 
+echo -e "$BLUE╠➣$NC 3$NC. Backup & Restore            $BLUE      ║ " 
+echo -e "$BLUE╠➣$NC 4$NC. Settings                    $BLUE      ║ " 
+echo -e "$BLUE╠➣$NC 5$NC. Exit                        $BLUE      ║ " 
 echo -e "$BLUE║---------------------------------------║"
 echo -e "$BLUE╠➣$NC User: Admin                          $BLUE║"
 echo -e "$BLUE╠➣$NC Expired: Never                       $BLUE║"
 echo -e "$BLUE╚═══════════════════════════════════════╝$NC"  
-read -p "Select From Options [ 1 - 7 ] : " menu
+read -p "Select From Options [ 1 - 5 ] : " menu
 echo -e ""
 case $menu in
 1)
 maddssh
 ;;
 2)
-maddxray
-;;
-3)
 restart
 ;;
-4)
+3)
 mbackup
 ;;
-5)
+4)
 msetting
 ;;
-6)
+5)
 clear
 exit
 ;;

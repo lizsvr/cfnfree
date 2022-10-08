@@ -15,7 +15,7 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 IZIN=$(curl https://raw.githubusercontent.com/lizsvr/project/main/ipvps.txt | grep $MYIP | awk '{print $3}')
-if [ $MYIP = $IZIN ]; then
+if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
@@ -24,13 +24,15 @@ echo -e "${NC}${LIGHT}Telegram : https://t.me/liz_mine"
 exit 0
 fi
 clear
-read -rp "Domain/Host : " -e domain
+echo -e "========================="
+read -rp "Masukan Domain/Host : " -e domain
+echo -e "========================="
+mkdir -p /usr/bin/xray
+mkdir -p /etc/xray
+echo $domain >> /etc/xray/domain
+echo $domain >> /root/domain
 echo "IP=$domain" >> /var/lib/akbarstorevpn/ipvps.conf
-echo $domain > /etc/xray/domain
-echo $domain > /root/domain
-clear
-sleep 0.5
-restart
+
 sleep 0.5
 domain=$(cat /etc/xray/domain)
 apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 

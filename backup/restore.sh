@@ -15,7 +15,7 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 IZIN=$(curl https://raw.githubusercontent.com/lizsvr/project/main/ipvps.txt | grep $MYIP | awk '{print $3}')
-if [ $MYIP = $IZIN ]; then
+if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
@@ -38,15 +38,15 @@ cp passwd /etc/
 cp group /etc/
 cp shadow /etc/
 cp gshadow /etc/
-cp -r wireguard /etc/
-cp chap-secrets /etc/ppp/
-cp passwd1 /etc/ipsec.d/passwd
-cp ss.conf /etc/shadowsocks-libev/ss.conf
-cp -r akbarstorevpn /var/lib/
-cp -r sstp /home/
+# cp -r wireguard /etc/
+# cp chap-secrets /etc/ppp/
+# cp passwd1 /etc/ipsec.d/passwd
+# cp ss.conf /etc/shadowsocks-libev/ss.conf
+# cp -r akbarstorevpn /var/lib/
+# cp -r sstp /home/
 cp -r xray /etc/
-cp -r trojan-go /etc/
-cp -r shadowsocksr /usr/local/
+# cp -r trojan-go /etc/
+# cp -r shadowsocksr /usr/local/
 cp -r public_html /home/vps/
 cp crontab /etc/
 strt

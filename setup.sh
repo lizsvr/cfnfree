@@ -20,31 +20,31 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Link Hosting Kalian Untuk Ssh Vpn
-akbarvpn="raw.githubusercontent.com/lizsvr/project/main/ssh"
+akbarvpn="raw.githubusercontent.com/lizsvr/cfnfree/main/ssh"
 # Link Hosting Kalian Untuk Sstp
-akbarvpnn="raw.githubusercontent.com/lizsvr/project/main/sstp"
+akbarvpnn="raw.githubusercontent.com/lizsvr/cfnfree/main/sstp"
 # Link Hosting Kalian Untuk Ssr
-akbarvpnnn="raw.githubusercontent.com/lizsvr/project/main/ssr"
+akbarvpnnn="raw.githubusercontent.com/lizsvr/cfnfree/main/ssr"
 # Link Hosting Kalian Untuk Shadowsocks
-akbarvpnnnn="raw.githubusercontent.com/lizsvr/project/main/shadowsocks"
+akbarvpnnnn="raw.githubusercontent.com/lizsvr/cfnfree/main/shadowsocks"
 # Link Hosting Kalian Untuk Wireguard
-akbarvpnnnnn="raw.githubusercontent.com/lizsvr/project/main/wireguard"
+akbarvpnnnnn="raw.githubusercontent.com/lizsvr/cfnfree/main/wireguard"
 # Link Hosting Kalian Untuk Xray
-akbarvpnnnnnn="raw.githubusercontent.com/lizsvr/project/main/xray"
+akbarvpnnnnnn="raw.githubusercontent.com/lizsvr/cfnfree/main/xray"
 # Link Hosting Kalian Untuk Ipsec
-akbarvpnnnnnnn="raw.githubusercontent.com/lizsvr/project/main/ipsec"
+akbarvpnnnnnnn="raw.githubusercontent.com/lizsvr/cfnfree/main/ipsec"
 # Link Hosting Kalian Untuk Backup
-akbarvpnnnnnnnn="raw.githubusercontent.com/lizsvr/project/main/backup"
+akbarvpnnnnnnnn="raw.githubusercontent.com/lizsvr/cfnfree/main/backup"
 # Link Hosting Kalian Untuk Websocket
-akbarvpnnnnnnnnn="raw.githubusercontent.com/lizsvr/project/main/websocket"
+akbarvpnnnnnnnnn="raw.githubusercontent.com/lizsvr/cfnfree/main/websocket"
 # Link Hosting Kalian Untuk Ohp
-akbarvpnnnnnnnnnn="raw.githubusercontent.com/lizsvr/project/main/ohp"
+akbarvpnnnnnnnnnn="raw.githubusercontent.com/lizsvr/cfnfree/main/ohp"
 # link Hosting update
-akbarvpnnnnnnnnnnn="raw.githubusercontent.com/lizsvr/project/main/update"
+akbarvpnnnnnnnnnnn="raw.githubusercontent.com/lizsvr/cfnfree/main/update"
 
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$(curl https://raw.githubusercontent.com/lizsvr/project/main/ipvps.txt | grep $MYIP | awk '{print $3}')
+IZIN=$(curl https://raw.githubusercontent.com/lizsvr/cfnfree/main/ipvps.txt | grep $MYIP | awk '{print $3}')
 if [ $MYIP = $IZIN ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
@@ -62,7 +62,7 @@ exit 0
 fi
 mkdir /var/lib/akbarstorevpn;
 #echo "IP=" >> /var/lib/akbarstorevpn/ipvps.conf
-wget https://${akbarvpn}/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://${akbarvpn}/addhost.sh && chmod +x addhost.sh && ./addhost.sh
 sleep 1
 #install v2ray
 wget https://${akbarvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S xray ./ins-xray.sh
@@ -70,15 +70,6 @@ wget https://${akbarvpnnnnnn}/ins-xray.sh && chmod +x ins-xray.sh && screen -S x
 wget https://${akbarvpn}/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 # Websocket
 wget https://${akbarvpnnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
-# Sstp
-#wget https://${akbarvpnn}/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
-#install ssr
-#wget https://${akbarvpnnn}/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-#wget https://${akbarvpnnnn}/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
-# installwg
-#wget https://${akbarvpnnnnn}/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
-# install L2TP
-#wget https://${akbarvpnnnnnnn}/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 # OphvServer
 wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 #Setting Backup
@@ -86,7 +77,7 @@ wget https://${akbarvpnnnnnnnn}/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 # Update Menu
 wget https://${akbarvpnnnnnnnnnnn}/getupdate.sh && chmod +x getupdate.sh && ./getupdate.sh
 # sslh fix
-wget https://raw.githubusercontent.com/lizsvr/project/main/sslh-fix/sslh-fix.sh && chmod +x sslh-fix.sh && ./sslh-fix.sh
+wget https://raw.githubusercontent.com/lizsvr/cfnfree/main/sslh-fix/sslh-fix.sh && chmod +x sslh-fix.sh && ./sslh-fix.sh
 #restart service
 restart
 
@@ -94,10 +85,6 @@ rm -f /root/cf.sh
 rm -f /root/ssh-vpn.sh
 rm -f /root/sslh-fix.sh
 rm -f /root/getupdate.sh
-#rm -f /root/sstp.sh
-#rm -f /root/wg.sh
-#rm -f /root/ss.sh
-#rm -f /root/ssr.sh
 rm -f /root/ins-xray.sh
 rm -f /root/ipsec.sh
 rm -f /root/set-br.sh
