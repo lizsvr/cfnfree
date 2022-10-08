@@ -5,6 +5,7 @@ rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ip
 ```
 
 ### Fitur Script
+
 • SSH & OpenVPN
 
 • SSH Websocket TLS & No TLS
@@ -31,7 +32,7 @@ rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ip
 
 • Dropbear                : 443, 109, 143
 
-• Squid Proxy             : 3128, 8080
+• Squid Proxy             : 3128, 8080 (OFF)
 
 • Badvpn                  : 7100, 7200, 7300
 
