@@ -24,11 +24,16 @@ echo -e "${NC}${LIGHT}Telegram : https://t.me/liz_mine"
 exit 0
 fi
 clear
+
+# Delete Files
+rm /etc/xray/*
+rm /root/domain
+rm /var/lib/akbarstorevpn/ipvps.conf
+# Done
+
 echo -e "========================="
 read -rp "Masukan Domain/Host : " -e domain
 echo -e "========================="
-mkdir -p /usr/bin/xray
-mkdir -p /etc/xray
 echo $domain >> /etc/xray/domain
 echo $domain >> /root/domain
 echo "IP=$domain" >> /var/lib/akbarstorevpn/ipvps.conf

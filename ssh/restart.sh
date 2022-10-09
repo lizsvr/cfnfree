@@ -27,6 +27,7 @@ echo -e ""
 echo -e "Starting Restart All Service"
 sleep 2
 #systemctl restart ssrmu
+systemctl daemon-reload
 systemctl restart ws-tls
 systemctl restart ws-nontls
 #systemctl restart xray.service
