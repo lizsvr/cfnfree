@@ -27,12 +27,13 @@ clear
 echo -e "========================="
 read -rp "Masukan Domain/Host : " -e domain
 echo -e "========================="
+echo -e "Please wait..."
 mkdir -p /usr/bin/xray
 mkdir -p /etc/xray
 echo $domain >> /etc/xray/domain
 echo $domain >> /root/domain
 echo "IP=$domain" >> /var/lib/akbarstorevpn/ipvps.conf
-
+echo "none" >> /var/lib/akbarstorevpn/cfndomain
 sleep 1
 
 # sleep 0.5

@@ -55,7 +55,6 @@ echo -e "$pass\n$pass\n" | passwd $Login &> /dev/null
 hariini=`date -d "0 days" +"%Y-%m-%d"`
 expi=`date -d "${hari} days" +"%Y-%m-%d"`
 clear
-clear
 echo -e "Thank You For Using Our Services"
 echo -e "====== SSH & OVPN Account ======"
 echo -e "IP/Host       : $IP"

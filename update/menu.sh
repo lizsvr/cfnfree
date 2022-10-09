@@ -27,11 +27,10 @@ echo -e "$BLUE║           $ORANGE  [ Main Menu ]          $BLUE   ║"
 echo -e "$BLUE╠═══════════════════════════════════════$BLUE╣"
 echo -e "$BLUE║---------------------------------------║"
 echo -e "$BLUE╠➣$NC 1$NC. SSH & OpenVPN Account             $BLUE║ "
-# echo -e "$BLUE╠➣$NC 2$NC. Xray/V2Ray & Trojan Account  $BLUE     ║ " 
 echo -e "$BLUE╠➣$NC 2$NC. Restart All Service         $BLUE      ║ " 
 echo -e "$BLUE╠➣$NC 3$NC. Backup & Restore            $BLUE      ║ " 
 echo -e "$BLUE╠➣$NC 4$NC. Settings                    $BLUE      ║ " 
-echo -e "$BLUE╠➣$NC 5$NC. About                        $BLUE      ║ " 
+echo -e "$BLUE╠➣$NC 5$NC. Cek Service                 $BLUE      ║ " 
 echo -e "$BLUE╠➣$NC 6$NC. Exit                        $BLUE      ║ " 
 echo -e "$BLUE║---------------------------------------║"
 echo -e "$BLUE╠➣$NC User: Admin                          $BLUE║"
@@ -53,7 +52,7 @@ mbackup
 msetting
 ;;
 5)
-about
+start-menu
 ;;
 5)
 clear

@@ -27,12 +27,14 @@ echo -e "$BLUE║           $ORANGE ✶ Setting Menu ✶        $BLUE   ║"
 echo -e "$BLUE╠═══════════════════════════════════════$BLUE╣"
 echo -e "$BLUE║---------------------------------------║"
 echo -e "$BLUE╠➣$NC 1$NC. Change Domain                     $BLUE║ "
-echo -e "$BLUE╠➣$NC 2$NC. Change Port SSH WS SSL/TLS   $BLUE     ║ " 
-echo -e "$BLUE╠➣$NC 3$NC. Change Port SSH WS Non-TLS   $BLUE     ║ " 
-echo -e "$BLUE╠➣$NC 4$NC. Change Port OVPN             $BLUE     ║ " 
-echo -e "$BLUE╠➣$NC 5$NC. Set Limit Speed             $BLUE      ║ " 
-echo -e "$BLUE╠➣$NC 6$NC. Cek Bandwith Server         $BLUE      ║ " 
-echo -e "$BLUE╠➣$NC 7$NC. Back to Menu                $BLUE      ║ " 
+echo -e "$BLUE╠➣$NC 2$NC. Add Cloudfront Domain             $BLUE║ "
+echo -e "$BLUE╠➣$NC 3$NC. Change Port SSH WS SSL/TLS   $BLUE     ║ " 
+echo -e "$BLUE╠➣$NC 4$NC. Change Port SSH WS Non-TLS   $BLUE     ║ " 
+echo -e "$BLUE╠➣$NC 5$NC. Change Port OVPN             $BLUE     ║ " 
+echo -e "$BLUE╠➣$NC 6$NC. Set Limit Speed             $BLUE      ║ " 
+echo -e "$BLUE╠➣$NC 7$NC. Cek Bandwith Server         $BLUE      ║ " 
+echo -e "$BLUE╠➣$NC 8$NC. Rennew Cert                 $BLUE      ║ " 
+echo -e "$BLUE╠➣$NC 9$NC. Back to Menu                $BLUE      ║ " 
 echo -e "$BLUE║---------------------------------------║"
 echo -e "$BLUE╚═══════════════════════════════════════╝$NC"  
 read -p "Select From Options [ 1 - 7 ] : " menu
@@ -45,18 +47,24 @@ addhost
 maddxray
 ;;
 3)
-portsshws
+cfnhost
 ;;
 4)
-portopvn
+portsshws
 ;;
 5)
-limitspeed
+portopvn
 ;;
 6)
-nvstat
+limitspeed
 ;;
 7)
+nvstat
+;;
+8)
+certsslh
+;;
+9)
 clear
 menu
 ;;

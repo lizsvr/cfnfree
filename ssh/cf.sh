@@ -31,7 +31,7 @@ DOMAIN=lizinstaller.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 SUB_DOMAIN=${sub}.lizinstaller.my.id
 CF_ID=missqueen300400@gmail.com
-CF_KEY=95ca90dd77ee00cddb30a4c3a2a9bc8e4db96
+CF_KEY=none
 set -euo pipefail
 IP=$(wget -qO- ipinfo.io/ip);
 echo "Updating DNS for ${SUB_DOMAIN}..."

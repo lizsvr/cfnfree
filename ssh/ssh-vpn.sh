@@ -432,6 +432,7 @@ wget -O wbmn "https://${akbarvpn}/webmin.sh"
 wget -O xp "https://${akbarvpn}/xp.sh"
 wget -O swapkvm "https://${akbarvpn}/swapkvm.sh"
 wget -O certsslh "https://${akbarvpn}/certsslh.sh"
+wget -O cfnhost "https://${akbarvpn}/cfnhost.sh"
 # wget -O addvmess "https://${akbarvpnn}/addv2ray.sh"
 # wget -O addvless "https://${akbarvpnn}/addvless.sh"
 # wget -O addtrojan "https://${akbarvpnn}/addtrojan.sh"
@@ -499,6 +500,8 @@ chmod +x renewtrgo
 chmod +x cektrgo
 chmod +x portsshws
 chmod +x portsshnontls
+chmod +x cfnhost
+chmod +x certsslh
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 echo "5 0 * * * root delexp && restart " >> /etc/crontab

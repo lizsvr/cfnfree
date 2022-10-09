@@ -134,5 +134,5 @@ else
 echo -e " Xray/V2Ray              :$Red [Error] $wh"
 fi
 echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh
-echo -e "----- Type Menu To Using Script -----"
+echo -e "----------- Mod By LIZSVR -----------"
 echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh

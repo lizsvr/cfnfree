@@ -25,22 +25,29 @@ exit 0
 fi
 clear
 
+echo -e "========================="
+read -rp "Masukan Domain/Host : " -e domain
+echo -e "========================="
+echo -e "Domain: ${domain} Ditambahkan..."
 # Delete Files
 rm /etc/xray/*
 rm /root/domain
 rm /var/lib/akbarstorevpn/ipvps.conf
 # Done
-
-echo -e "========================="
-read -rp "Masukan Domain/Host : " -e domain
-echo -e "========================="
 echo $domain >> /etc/xray/domain
 echo $domain >> /root/domain
 echo "IP=$domain" >> /var/lib/akbarstorevpn/ipvps.conf
 
 sleep 1
 
+source /var/lib/akbarstorevpn/ipvps.conf
+if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
+else
+domain=$IP
+fi
+clear
+
 apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 
 apt install socat cron bash-completion ntpdate -y
 ntpdate pool.ntp.org
