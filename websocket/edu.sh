@@ -46,7 +46,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/ws-nontls 8880
+ExecStart=/usr/bin/python -O /usr/local/bin/ws-nontls 80
 Restart=on-failure
 
 [Install]
@@ -88,7 +88,7 @@ systemctl restart ws-ovpn
 
 # Getting Proxy Template
 wget -q -O /usr/local/bin/ws-tls https://${akbarvpn}/ws-tls
-#cp /root/myproject/websocket/ws-tls /usr/local/bin/ws-tls
+
 chmod +x /usr/local/bin/ws-tls
 
 # Installing Service
