@@ -23,12 +23,14 @@ echo -e "${NC}${LIGHT}Please Contact Admin!!"
 echo -e "${NC}${LIGHT}Telegram : https://t.me/liz_mine"
 exit 0
 fi
+error1="${RED}[ERROR]${NC}"
+success="${GREEN}[SUCCESS]${NC}"
 clear
 
 echo -e "========================="
 read -rp "Masukan Domain/Host : " -e domain
 echo -e "========================="
-echo -e "Domain: ${domain} Ditambahkan..."
+echo -e "${success} Domain: ${domain} Ditambahkan..."
 # Delete Files
 rm /etc/xray/*
 rm /root/domain

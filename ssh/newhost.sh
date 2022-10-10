@@ -23,18 +23,20 @@ echo -e "${NC}${LIGHT}Please Contact Admin!!"
 echo -e "${NC}${LIGHT}Telegram : https://t.me/liz_mine"
 exit 0
 fi
+error1="${RED}[ERROR]${NC}"
+success="${GREEN}[SUCCESS]${NC}"
 clear
 echo -e "========================="
 read -rp "Masukan Domain/Host : " -e domain
 echo -e "========================="
-echo -e "Please wait..."
+echo -e "${success} Please wait..."
 mkdir -p /usr/bin/xray
 mkdir -p /etc/xray
 echo $domain >> /etc/xray/domain
 echo $domain >> /root/domain
 echo "IP=$domain" >> /var/lib/akbarstorevpn/ipvps.conf
 echo "none" >> /var/lib/akbarstorevpn/cfndomain
-sleep 1
+sleep 5
 
 # sleep 0.5
 # domain=$(cat /etc/xray/domain)
