@@ -44,12 +44,12 @@ cpu=$(neofetch | grep "CPU" | cut -d: -f2 | sed 's/ //g')
 memory=$(neofetch | grep "Memory" | cut -d: -f2 | sed 's/ //g')
 echo -e "Getting Information..."
 clear
-echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh
-echo -e "$bred           SELAMAT DATANG            $wh"
-echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh
-figlet LIZSVR | lolcat
-#echo -e "$wh"
-echo -e "Telegram : @liz_mine"
+# echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh
+# echo -e "$bred           SELAMAT DATANG            $wh"
+# echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh
+# figlet LIZSVR | lolcat
+# #echo -e "$wh"
+# echo -e "Telegram : @liz_mine"
 echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh
 echo -e "$bred          Informasi System           $wh"
 echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh
