@@ -23,6 +23,8 @@ echo -e "${NC}${LIGHT}Please Contact Admin!!"
 echo -e "${NC}${LIGHT}Telegram : https://t.me/liz_mine"
 exit 0
 fi
+error1="${RED}[ERROR]${NC}"
+success="${GREEN}[SUCCESS]${NC}"
 clear
 source /var/lib/akbarstorevpn/ipvps.conf
 if [[ "$IP" = "" ]]; then
@@ -31,6 +33,9 @@ else
 domain=$IP
 fi
 clear
+echo -e "=========================="
+echo -e "Note : ~Don't use space!!"
+echo -e "=========================="
 read -p "Username : " Login
 read -p "Password : " pass
 read -p "Expired (Days): " hari
@@ -38,27 +43,39 @@ read -p "Expired (Days): " hari
 IP=$(wget -qO- ipinfo.io/ip);
 ws="$(cat ~/log-install.txt | grep -w "Websocket TLS" | cut -d: -f2|sed 's/ //g')"
 ws2="$(cat ~/log-install.txt | grep -w "Websocket None TLS" | cut -d: -f2|sed 's/ //g')"
+cfn=$(cat /var/lib/akbarstorevpn/cfndomain)
 
 ssl="$(cat ~/log-install.txt | grep -w "Stunnel5" | cut -d: -f2)"
 sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+cek="$(cat /etc/passwd | grep /bin/false | grep ${Login} | cut -d: -f1 | sed 's/ //g')"
 clear
 #systemctl restart ws-tls
 #systemctl restart ws-nontls
 #systemctl restart ssh-ohp
 #systemctl restart dropbear-ohp
 #systemctl restart openvpn-ohp
+if [[ "$Login" = "$cek" ]]; then
+echo -e "======================"
+echo -e "${error1} User ${Login} Sudah Terdaftar"
+echo -e "======================"
+exit 0
+else
 useradd -e `date -d "${hari} days" +"%Y-%m-%d"` -s /bin/false -M $Login
 expi="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$pass\n$pass\n" | passwd $Login &> /dev/null
 hariini=`date -d "0 days" +"%Y-%m-%d"`
 expi=`date -d "${hari} days" +"%Y-%m-%d"`
+echo -e  "${success} Menambahkan User Please Wait.."
+sleep 5
 clear
+fi
 echo -e "Thank You For Using Our Services"
 echo -e "====== SSH & OVPN Account ======"
 echo -e "IP/Host       : $IP"
 echo -e "Domain        : ${domain}"
+echo -e "CloudFront    : $cfn"
 echo -e "Username      : $Login"
 echo -e "Password      : $pass"
 echo -e ""
