@@ -35,6 +35,7 @@ echo -e "$BLUE╠➣$NC 6$NC. Exit                        $BLUE      ║ "
 echo -e "$BLUE║---------------------------------------║"
 echo -e "$BLUE╠➣$NC User: Admin                          $BLUE║"
 echo -e "$BLUE╠➣$NC Expired: Never                       $BLUE║"
+echo -e "$BLUE╠➣$NC Mod By LIZSVR                        $BLUE║"
 echo -e "$BLUE╚═══════════════════════════════════════╝$NC"  
 read -p "Select From Options [ 1 - 6 ] : " menu
 echo -e ""
