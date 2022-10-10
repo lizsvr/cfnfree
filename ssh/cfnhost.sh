@@ -11,6 +11,10 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
+
+error1="${RED}[ERROR]${NC}"
+success="${GREEN}[ERROR]${NC}"
+
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
@@ -28,9 +32,9 @@ clear
 echo -e "========================="
 read -rp "Masukan Domain/Host : " -e domain
 echo -e "========================="
+ehco -e "${success} Domain : ${domain} Di Tambahkan Please Wait.."
 # Delete Files
 rm /var/lib/akbarstorevpn/cfndomain
 # Done
 echo "${domain}" >> /var/lib/akbarstorevpn/cfndomain
-echo -e "${NC}Domain: ${domain} Ditambahkan "
-sleep 1
+sleep 5
