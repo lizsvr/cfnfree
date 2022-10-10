@@ -25,7 +25,7 @@ exit 0
 fi
 clear
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/lizsvr/project/main/backup"
+akbarvpn="raw.githubusercontent.com/lizsvr/cfnfree/main/backup"
 
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
@@ -47,9 +47,9 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user ahmaddani231187@gmail.com
-from ahmaddani231187@gmail.com
-password vjbikwuumofcdexc 
+user lizsvrbckup@gmail.com
+from lizsvrbckup@gmail.com 
+password rvgopelfmmdsheft
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
