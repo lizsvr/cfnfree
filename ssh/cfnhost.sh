@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 
 error1="${RED}[ERROR]${NC}"
-success="${GREEN}[ERROR]${NC}"
+success="${GREEN}[SUCCESS]${NC}"
 
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
@@ -32,7 +32,7 @@ clear
 echo -e "========================="
 read -rp "Masukan Domain/Host : " -e domain
 echo -e "========================="
-ehco -e "${success} Domain : ${domain} Di Tambahkan Please Wait.."
+echo -e "${success}\nDomain : ${domain} Di Tambahkan.."
 # Delete Files
 rm /var/lib/akbarstorevpn/cfndomain
 # Done

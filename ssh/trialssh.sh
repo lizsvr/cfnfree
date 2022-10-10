@@ -39,6 +39,7 @@ ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | 
 Login=lizsvr-`</dev/urandom tr -dc X-Z0-9 | head -c4`
 ws="$(cat ~/log-install.txt | grep -w "Websocket TLS" | cut -d: -f2| sed 's/ //g')"
 ws2="$(cat ~/log-install.txt | grep -w "Websocket None TLS" | cut -d: -f2| sed 's/ //g')"
+cfn=$(cat /var/lib/akbarstorevpn/cfndomain)
 hari="1"
 Pass=1
 clear
@@ -58,6 +59,7 @@ echo -e "Thank You For Using Our Services"
 echo -e "====== SSH & OVPN Account ======"
 echo -e "IP/Host       : $IP"
 echo -e "Domain        : ${domain}"
+echo -e "CloudFront    : $cfn"
 echo -e "Username      : $Login"
 echo -e "Password      : $pass"
 echo -e ""

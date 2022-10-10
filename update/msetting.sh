@@ -44,13 +44,13 @@ case $menu in
 addhost
 ;;
 2)
-maddxray
-;;
-3)
 cfnhost
 ;;
-4)
+3)
 portsshws
+;;
+4)
+portsshnontls
 ;;
 5)
 portopvn
@@ -59,7 +59,7 @@ portopvn
 limitspeed
 ;;
 7)
-nvstat
+vnstat
 ;;
 8)
 certsslh
