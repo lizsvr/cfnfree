@@ -1,31 +1,27 @@
 #!/bin/bash
-m="\033[0;1;36m"
-y="\033[0;1;37m"
-yy="\033[0;1;32m"
-yl="\033[0;1;33m"
-nw="\e[38;5;82m"
-wh="\033[0m"
-bred="\e[41m"
-blue="\e[38;5;21m"
-#fonts color
-Green="\033[32m"
-Red="\033[31m"
-Yellow="\033[33m"
-GreenBG="\033[42;37m"
-RedBG="\033[41;37m"
-Font="\033[0m"
+# Color
+RED='\033[0;31m'
+NC='\033[0m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+LIGHT='\033[0;37m'
+BRED="\e[41m"
+BBLUE="\e[38;5;21m"
 #information
-OK="${Green}[OK]${Font}"
-Error="${Red}[Mistake]${Font}"
+OK="${GREEN}[OK]${NC}"
+Error="${RED}[Mistake]${NC}"
 #pkg install ncurses-utils
 #echo -e "Getting Information Please Wait...."
 is_root() {
     if [ 0 == $UID ]; then
-        echo -e "${OK} ${GreenBG} The current user is the root user..${Font}"
+        echo -e "${OK} ${NC} The current user is the root user..${NC}"
         sleep 1
         echo -e "Getting Information...."
     else
-        echo -e "${Error} ${RedBG} Please switch to the root user and execute start-menu again ${Font}"
+        echo -e "${Error} ${NC} Please switch to the root user and execute start-menu again ${NC}"
         exit 1
     fi
 }
@@ -44,30 +40,30 @@ cpu=$(neofetch | grep "CPU" | cut -d: -f2 | sed 's/ //g')
 memory=$(neofetch | grep "Memory" | cut -d: -f2 | sed 's/ //g')
 echo -e "Getting Information..."
 clear
-# echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh
-# echo -e "$bred           SELAMAT DATANG            $wh"
-# echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh
+# echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
+# echo -e "$BRED           SELAMAT DATANG            $NC"
+# echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
 # figlet LIZSVR | lolcat
-# #echo -e "$wh"
+# #echo -e "$NC"
 # echo -e "Telegram : @liz_mine"
-echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh
-echo -e "$bred          Informasi System           $wh"
-echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh
-echo -e "$m IP Address :$wh $ip $wh"
-echo -e "$m Domain :$wh $domainhost $wh"
-echo -e "$m Region :$wh $region $wh"
-echo -e "$m ISP :$wh $isp $wh"
-echo -e "$m Host : $host $wh"
-echo -e "$m CPU : $cpu $wh"
-echo -e "$m Kernel : $kernel $wh"
-echo -e "$m Up Time : $uptime $wh"
-echo -e "$m OS System : $ossys $wh"
-echo -e "$m Time Zone :$wh $timezone $wh"
-echo -e "$m Date :$wh $(date +%A) $(date +%m-%d-%Y)"
-echo -e "$m Memory : $memory $wh"
-echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh
-echo -e "$bred           Service Status            $wh"
-echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh
+echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
+echo -e "$BRED          Informasi System           $NC"
+echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
+echo -e "$CLAY IP Address :$NC $ip $NC"
+echo -e "$CLAY Domain :$NC $domainhost $NC"
+echo -e "$CLAY Region :$NC $region $NC"
+echo -e "$CLAY ISP :$NC $isp $NC"
+echo -e "$CLAY Host : $NC $host $NC"
+echo -e "$CLAY CPU : $NC $cpu $NC"
+echo -e "$CLAY Kernel : $NC $kernel $NC"
+echo -e "$CLAY Up Time : $NC $uptime $NC"
+echo -e "$CLAY OS System : $NC $ossys $NC"
+echo -e "$CLAY Time Zone :$NC $timezone $NC"
+echo -e "$CLAY Date :$NC $(date +%A) $(date +%m-%d-%Y)"
+echo -e "$CLAY Memory : $NC $memory $NC"
+echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
+echo -e "$BRED           Service Status            $NC"
+echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
 #
 #
 sshs=$(systemctl status ssh | grep Active: | awk '{print $2}')
@@ -79,60 +75,60 @@ dropbears=$(systemctl status dropbear | grep Active: | awk '{print $2}')
 nginxs=$(systemctl status nginx | grep Active: | awk '{print $2}')
 crons=$(systemctl status cron | grep Active: | awk '{print $2}')
 fails=$(systemctl status fail2ban | grep Active: | awk '{print $2}')
-xrays=$(systemctl status xray | grep Active: | awk '{print $2}')
+# xrays=$(systemctl status xray | grep Active: | awk '{print $2}')
 ell=active
 #
 #
 if [ "$sshs" == "$ell" ]; then
-echo -e " SSH                     :$Green [Running] $wh"
+echo -e " SSH                     :$GREEN [Running] $NC"
 else
-echo -e " SSH                     :$Red [Error] $wh"
+echo -e " SSH                     :$RED [Error] $NC"
 fi
 if [ "$wstls" == "$ell" ]; then
-echo -e " Websocket TLS           :$Green [Running] $wh"
+echo -e " Websocket TLS           :$GREEN [Running] $NC"
 else
-echo -e " Websocket TLS           :$Red [Error] $wh"
+echo -e " Websocket TLS           :$RED [Error] $NC"
 fi
 if [ "$wsnontls" == "$ell" ]; then
-echo -e " Websocket Non TLS       :$Green [Running] $wh"
+echo -e " Websocket Non TLS       :$GREEN [Running] $NC"
 else
-echo -e " Websocket Non TLS       :$Red [Error] $wh"
+echo -e " Websocket Non TLS       :$RED [Error] $NC"
 fi
 if [ "$ovpns" == "$ell" ]; then
-echo -e " OpenVPN                 :$Green [Running] $wh"
+echo -e " OpenVPN                 :$GREEN [Running] $NC"
 else
-echo -e " OpenVpn                 :$Red [Error] $wh"
+echo -e " OpenVpn                 :$RED [Error] $NC"
 fi
 if [ "$sttunl5" == "$ell" ]; then
-echo -e " Stunnel 5               :$Green [Running] $wh"
+echo -e " Stunnel 5               :$GREEN [Running] $NC"
 else
-echo -e " Stunnel 5               :$Red [Error] $wh"
+echo -e " Stunnel 5               :$RED [Error] $NC"
 fi
 if [ "$dropbears" == "$ell" ]; then
-echo -e " Dropbear                :$Green [Running] $wh"
+echo -e " Dropbear                :$GREEN [Running] $NC"
 else
-echo -e " Dropbear                :$Red [Error] $wh"
+echo -e " Dropbear                :$RED [Error] $NC"
 fi
 if [ "$nginxs" == "$ell" ]; then
-echo -e " Nginx                   :$Green [Running] $wh"
+echo -e " Nginx                   :$GREEN [Running] $NC"
 else
-echo -e " Nginx                   :$Red [Error] $wh"
+echo -e " Nginx                   :$RED [Error] $NC"
 fi
 if [ "$crons" == "$ell" ]; then
-echo -e " Cron                    :$Green [Running] $wh"
+echo -e " Cron                    :$GREEN [Running] $NC"
 else
-echo -e " Cron                    :$Red [Error] $wh"
+echo -e " Cron                    :$RED [Error] $NC"
 fi
 if [ "$fails" == "$ell" ]; then
-echo -e " Fail2ban                :$Green [Running] $wh"
+echo -e " Fail2ban                :$GREEN [Running] $NC"
 else
-echo -e " Fail2ban                :$Red [Error] $wh"
+echo -e " Fail2ban                :$RED [Error] $NC"
 fi
 if [ "$xrays" == "$ell" ]; then
-echo -e " Xray/V2Ray              :$Green [Running] $wh"
-else
-echo -e " Xray/V2Ray              :$Red [Error] $wh"
-fi
-echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh
+# echo -e " Xray/V2Ray              :$GREEN [Running] $NC"
+# else
+# echo -e " Xray/V2Ray              :$RED [Error] $NC"
+# fi
+echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
 echo -e "----------- Mod By LIZSVR -----------"
-echo -e "$blue━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$wh
+echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
