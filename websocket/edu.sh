@@ -26,7 +26,7 @@ exit 0
 fi
 clear
 # Link Hosting Kalian
-akbarvpn="raw.githubusercontent.com/lizsvr/project/main/websocket"
+akbarvpn="raw.githubusercontent.com/lizsvr/cfnfree/main/websocket"
 
 # Getting Proxy Template
 wget -q -O /usr/local/bin/ws-nontls https://${akbarvpn}/websocket.py
