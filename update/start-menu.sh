@@ -46,9 +46,9 @@ clear
 # figlet LIZSVR | lolcat
 # #echo -e "$NC"
 # echo -e "Telegram : @liz_mine"
-echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
+echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e "$BRED          Informasi System           $NC"
-echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
+echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e "$CLAY IP Address :$NC $ip $NC"
 echo -e "$CLAY Domain :$NC $domainhost $NC"
 echo -e "$CLAY Region :$NC $region $NC"
@@ -61,9 +61,9 @@ echo -e "$CLAY OS System : $NC $ossys $NC"
 echo -e "$CLAY Time Zone :$NC $timezone $NC"
 echo -e "$CLAY Date :$NC $(date +%A) $(date +%m-%d-%Y)"
 echo -e "$CLAY Memory : $NC $memory $NC"
-echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
+echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e "$BRED           Service Status            $NC"
-echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
+echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 #
 #
 sshs=$(systemctl status ssh | grep Active: | awk '{print $2}')
@@ -124,11 +124,11 @@ echo -e " Fail2ban                :$GREEN [Running] $NC"
 else
 echo -e " Fail2ban                :$RED [Error] $NC"
 fi
-if [ "$xrays" == "$ell" ]; then
+#if [ "$xrays" == "$ell" ]; then
 # echo -e " Xray/V2Ray              :$GREEN [Running] $NC"
 # else
 # echo -e " Xray/V2Ray              :$RED [Error] $NC"
 # fi
-echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
+echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e "----------- Mod By LIZSVR -----------"
-echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"$NC
+echo -e "$BLUE━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
