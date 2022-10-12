@@ -1,6 +1,6 @@
 #!/bin/bash
 # ==========================================
-
+echo -e "Restarting All Service Please Wait..."
 sleep 15
 systemctl stop ws-tls 
 pkill python

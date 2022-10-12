@@ -43,7 +43,7 @@ case $menu in
 maddssh
 ;;
 2)
-restart
+sslh-fix-reboot
 ;;
 3)
 mbackup
