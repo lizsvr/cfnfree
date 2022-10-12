@@ -49,7 +49,7 @@ port 587
 auth on
 user lizsvrbckup@gmail.com
 from lizsvrbckup@gmail.com 
-password rvgopelfmmdsheft
+password yourpaswordapp
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
