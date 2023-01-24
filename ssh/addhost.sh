@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/Akbar218
+# My Telegram : https://t.me/liz_mine
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -29,8 +29,11 @@ clear
 
 echo -e "========================="
 read -rp "Masukan Domain/Host : " -e domain
+clear
 echo -e "========================="
 echo -e "${success} Domain: ${domain} Ditambahkan..."
+echo -e "========================="
+sleep 3
 # Delete Files
 rm /etc/xray/*
 rm /root/domain
