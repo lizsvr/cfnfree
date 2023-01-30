@@ -52,8 +52,11 @@ from lizsvrbckup@gmail.com
 password yourpaswordapp
 logfile ~/.msmtp.log
 EOF
+
 chown -R www-data:www-data /etc/msmtprc
+
 cd /usr/bin
+
 #wget -O autobackup "https://${akbarvpn}/autobackup.sh"
 wget -O addemail "https://${akbarvpn}/addemail.sh"
 wget -O changesend "https://${akbarvpn}/changesend.sh"

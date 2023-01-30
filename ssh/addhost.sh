@@ -66,11 +66,11 @@ chronyc tracking -v
 mkdir -p /etc/xray
 sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
 cd /root/
-wget https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
+curl https://get.acme.sh | sh
 bash acme.sh --install
-rm acme.sh
 cd .acme.sh
+bash acme.sh --set-default-ca --server letsencrypt
 bash acme.sh --register-account -m senowahyu62@gmail.com
-bash acme.sh --issue --standalone -d $domain --force
+bash acme.sh --issue --standalone -d $domain--force
 bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
 sleep 3
